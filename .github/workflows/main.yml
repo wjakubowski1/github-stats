@@ -39,7 +39,7 @@ jobs:
 
     - name: Generate images
       run: |
-        ./zig-out/bin/github-stats
+        ./zig-out/bin/github-stats --exclude-repos github-stats --exclude-langs Zig
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         EXCLUDE_REPOS: ${{ secrets.EXCLUDE_REPOS }}
